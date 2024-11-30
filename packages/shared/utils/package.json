@@ -2,9 +2,12 @@
   "name": "utils",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "build/index",
+  "types": "src/index",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "clean": "rm -rf build tsconfig.tsbuildinfo",
+    "build": "tsc --incremental",
+    "start:dev": "tsc -w --incremental"
   },
   "keywords": [],
   "author": "",

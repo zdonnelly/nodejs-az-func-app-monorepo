@@ -1,3 +1,5 @@
 packages:
-  - src/*
-  - src/shared/*
+  - apps/*
+  - packages/dashboard
+  - packages/social
+  - packages/shared/*

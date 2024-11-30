@@ -1,6 +1,9 @@
 /.idea/
-/.vs/
-/.vscode/
+/**/.vs/
+/**/.vscode/
 /node_modules/
 /vendor/
 /**/node_modules/
+/**/.env
+/**/.env.local
+/**/build
