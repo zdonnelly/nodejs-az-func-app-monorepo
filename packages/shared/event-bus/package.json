@@ -1,5 +1,5 @@
 {
-  "name": "social",
+  "name": "event-bus",
   "version": "1.0.0",
   "description": "",
   "main": "build/index",
@@ -9,18 +9,10 @@
     "build": "tsc --incremental",
     "start:dev": "tsc -w --incremental"
   },
-  "dependencies": {
-    "@azure/cosmos": "^4.2.0",
-    "db": "workspace:*",
-    "event-bus": "workspace:*",
-    "utils": "workspace:*",
-    "uuid": "^11.0.3"
-  },
-  "devDependencies": {
-    "@types/node": "^22.10.0",
-    "typescript": "^5.7.2"
-  },
   "keywords": [],
   "author": "Zachary Donnelly",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "@azure/service-bus": "^7.9.5"
+  }
 }

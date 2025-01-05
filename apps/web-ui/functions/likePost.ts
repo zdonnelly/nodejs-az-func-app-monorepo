@@ -1,5 +1,5 @@
-import { app, HttpRequest, HttpResponseInit } from "@azure/functions";
-import { likePost } from 'social';
+import { app, HttpRequest, HttpResponseInit } from '@azure/functions';
+import { LikePost } from 'social';
 
 export interface LikePostRequestBody {
     authorId: string,
@@ -7,15 +7,15 @@ export interface LikePostRequestBody {
 }
 export default async function likePostHandler(req: HttpRequest): Promise<HttpResponseInit> {
     const { authorId, postId } = await req.json() as LikePostRequestBody;
-    await likePost(authorId, postId);
+    await new LikePost().execute(authorId, postId);
     return {
         status: 200,
         body: 'OK'
-    }
+    };
 }
 
 app.http('likePost', {
     methods: ['PUT'],
-    authLevel: 'anonymous',
+    authLevel: 'function',
     handler: likePostHandler,
-})
+});

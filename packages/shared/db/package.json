@@ -10,7 +10,7 @@
     "start:dev": "tsc -w --incremental"
   },
   "keywords": [],
-  "author": "",
+  "author": "Zachary Donnelly",
   "license": "ISC",
   "dependencies": {
     "@azure/cosmos": "^4.2.0"

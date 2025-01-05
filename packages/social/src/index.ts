@@ -1,6 +1,4 @@
-export { Author } from './author';
-export { getAuthor } from "./get-author";
-export { createPost } from './create-post';
-export { likePost } from "./like-post";
-export { Post } from './post';
-export { register } from './register';
+export { default as GetAuthor } from './app/GetAuthor';
+export { default as CreatePost }  from './app/CreatePost';
+export { default as LikePost } from './app/LikePost';
+export { default as Register } from './app/Register';

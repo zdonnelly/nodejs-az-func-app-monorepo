@@ -1,5 +1,6 @@
 {
-  "name": "",
+  "name": "web-ui",
+  "author": "Zachary Donnelly",
   "version": "1.0.0",
   "description": "",
   "main": "build/*.js",
@@ -7,7 +8,7 @@
     "build": "tsc --incremental",
     "watch": "tsc -w",
     "clean": "rimraf dist",
-    "prestart": "npm run clean && npm run build && node ./build/_startup.js",
+    "prestart": "npm run clean && npm run build && node ./build/startup.js",
     "start": "func start",
     "start:dev": "npm-run-all --parallel watch start",
     "start-dev": "pnpm run --stream build && func start --language-worker -- --inspect=5858",
@@ -15,7 +16,6 @@
   },
   "dependencies": {
     "@azure/functions": "^4.0.0",
-    "dotenv": "^16.4.5",
     "social": "workspace:*"
   },
   "devDependencies": {
